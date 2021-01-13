@@ -15,7 +15,7 @@ The Transfer Learning technique is very useful because:
 - There are fewer parameters to be trained (only last layer/layers) and thus less training time,
 
 - There is less demand for heavy computational resources like GPU, TPU (but still depends on the data available for task B).
-
+![](digram.png)
 ## Cats vs Non-cats using Transfer Learning - How do we do Transfer Learning?
 Transfer learning makes sense when the data in training for task A is quite large and that of task B is relatively smaller.
 
@@ -32,13 +32,16 @@ So basically, we store the knowledge from the previous task in the form of the w
 - We are going to build it on top of the pre-trained VGG16 models.
 - We shall use the weights of the model, and fine-tune it by adding some layers on top of that, in order to customize it for our own purpose - cat vs non-cat classification.
 - We use the same weights of the CNNs by freezing them, and we remove the top(which are dense layers) to add our customized dense layers. The customized top dense layers are trained(which is known as fine-tuning), to make them especially learn about our data set.
-
+![](digram_cnn.png)
 ## Cats vs Non-cats using Transfer Learning - The VGG16 Model
 Firstly, let us know about the VGG16 model pre-trained on the Imagenet database.
 
 - The VGG16 is a trained CNN primarily built to classify 1000 classes of the ImageNet database.
 
 - It is built by using roughly 1.2 million training images, 50,000 validation images, and 150,000 testing images.
+![](dig_vgg16.png)
+## Cats vs Non-cats using Transfer Learning - Workflow
+![](dig_workfloe.jpg)
 About the Dataset
 
 Dataset is located at /cat-non-cat
