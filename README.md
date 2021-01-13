@@ -50,4 +50,29 @@ Dataset is in .h5 file. It is a file format that could store the data - along wi
 - train_catvnoncat.h5 - a training set of images labeled as cat (y=1) or non-cat (y=0)
 - test_catvnoncat.h5 - a test set of images labeled as cat or non-cat
 - Each image is of shape (num_px, num_px, 3) where 3 is for the 3 channels (RGB). Thus, each image is square (height = num_px) and (width = num_px) Now, let us load the dataset into our working session.
+## Importing the Modules
+We are going to use the following modules for this exercise:
+- NumPy
+- h5py
+- matplotlib
+- TensorFlow
+- tensorflow.keras
+## Visualize the Data
+The classes of the images in the datasets are cat and non-cat. These labels of each sample are stored in train_set_y_orig, validation_y and test_set_y, where 1 means 'cat' and 0 means 'non-cat'. Let us see how to get this info Pythonically:
+## Shape of the data
+Let us first split the test data in order to use a part of it for validation purposes. After that, let us have a look at the shape of the train, validation, and test datasets.
+## Getting Pre-Trained VGG16 base model
+The trained VGG16 model is available with tensorflow.keras.applications. We have imported this as from tensorflow.keras.applications import VGG16 in the Import Modules section.
+## Compile the VGG16 model
+In addition to adding the custom dense layers to train, we should also mention some other factors like:
 
+- the optimization algorithm
+- learning rate
+- loss function
+- metrics of evaluation and others.
+## Visualizing the model
+Let us have a complete picture of our new VGG16 model.
+
+We could view that using the summary() method on the vgg_base and vgg_model.
+
+Also, we could visualize them using plot_model, a Keras utility. Let's see how!
